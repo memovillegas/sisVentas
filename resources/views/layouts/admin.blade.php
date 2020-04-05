@@ -92,7 +92,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{url('almacen/articulo')}}"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                <li><a href="{{url('almacen/producto')}}"><i class="fa fa-circle-o"></i> Productos</a></li>
                 <li><a href="{{url('almacen/categoria')}}"><i class="fa fa-circle-o"></i> Categorías</a></li>
               </ul>
             </li>
@@ -104,7 +104,7 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{url('compras/ingreso')}}"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li><a href="{{url('compras/pedidos')}}"><i class="fa fa-circle-o"></i> Pedidos</a></li>
                 <li><a href="{{url('compras/proveedor')}}"><i class="fa fa-circle-o"></i> Proveedores</a></li>
               </ul>
             </li>

@@ -16,7 +16,7 @@
                     <th>Nombre</th>
                     <th>Domicilio</th>
                     <th>Telefono</th>
-                    <th>Correo</th>
+                   
                     <th>Activo</th>
                     <th>Opciones</th>
                     
@@ -27,7 +27,7 @@
                     <td>{{$pro->nombre}}</td>
                     <td>{{$pro->domicilio}}</td>
                     <td>{{$pro->telefono}}</td>
-                    <td>{{$pro->correo}}</td>
+                    
                     <td>{{$pro->activo}}</td>
                     <td>
                         <a href="{{URL::action('ProveedorController@edit',$pro->idProveedor)}}"><button class="btn btn-info">Editar</button></a>

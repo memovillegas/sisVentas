@@ -59,18 +59,35 @@
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
-                    <label for="stock">Correo</label>
-                    <input type="text" name="correo"  value="{{old('correo')}}" class="form-control" placeholder="Correo:">
+                    <label for="stock">Fecha de Ingreso</label>
+                    <input type="date" name="fechaIngreso"  value="{{old('fechaIngreso')}}" class="form-control" placeholder="Fecha de ingreso:">
             </div>
         </div>
 
-       
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="form-group">
+                    <label for="stock">Puesto</label>
+                    <input type="text" name="puesto"  value="{{old('puesto')}}" class="form-control" placeholder="Puesto:">
+            </div>
+        </div>
 
-       
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="form-group">
+                    <label for="stock">Salario</label>
+                    <input type="text" name="salario"  value="{{old('salario')}}" class="form-control" placeholder="Salario:">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="form-group">
+                    <label for="stock">Seguro</label>
+                    <input type="text" name="seguro"  value="{{old('seguro')}}" class="form-control" placeholder="Seguro:">
+            </div>
+        </div>
+
         </div>
         <div class="col-lg-6 col-lg-6 col-sm-6 col-md-6 col-xs-12">
-            <div class="form-group">
-                
+            <div class="form-group">    
                     <button class="btn btn-primary" type="submit">Guardar</button>
                     <button class="btn btn-danger" type="reset">Cancelar</button>
                 

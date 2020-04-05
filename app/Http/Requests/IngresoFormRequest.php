@@ -28,8 +28,6 @@ class IngresoFormRequest extends FormRequest
             'idarticulo'=>'required',
             'numComprobante'=>'required|max:10',
             'cantidad'=>'required',
-            // 'totalPagar'=>'required',
-            // 'saldoPendiente'=>'required',
             'precioCompra'=>'required',
             'precioVenta'=>'required',
         ];

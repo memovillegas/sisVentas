@@ -14,11 +14,14 @@ class Empleado extends Model
      public $timestamps = false;
  
      protected $fillable =[
-         'nombre',
+         'nombre',                  
          'apePaterno',
          'apeMaterno',
          'domicilio',
          'telefono',
-         'correo'
+         'fechaIngreso',
+         'puesto',
+         'salario',
+         'seguro',        
      ];
 }

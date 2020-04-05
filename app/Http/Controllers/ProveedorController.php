@@ -11,13 +11,13 @@ use DB;
 class ProveedorController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth');
+        // $this->middleware('auth');
    }
     public function index(Request $request)
     {
        if($request){
           $query = trim($request->get('searchText'));
-           $proveedores=DB::table('proveedor')
+           $proveedores=DB::table('proveedores')
            ->where('nombre','LIKE','%'.$query.'%')
            ->where('activo',1)
            ->paginate(7);
@@ -36,7 +36,7 @@ class ProveedorController extends Controller
         $proveedor->nombre=$request->get('nombre');
         $proveedor->domicilio=$request->get('domicilio');
         $proveedor->telefono=$request->get('telefono');
-        $proveedor->correo=$request->get('correo');
+        // $proveedor->correo=$request->get('correo');
         // $proveedor->unidadMedida=$request->get('unidadMedida');
         $proveedor->activo='1';
         $proveedor->save();
@@ -58,7 +58,7 @@ class ProveedorController extends Controller
         $proveedor->nombre=$request->get('nombre');
         $proveedor->domicilio=$request->get('domicilio');
         $proveedor->telefono=$request->get('telefono');
-        $proveedor->correo=$request->get('correo');
+
         $proveedor->activo='1';
         $proveedor->update();
         return Redirect::to('compras/proveedor');

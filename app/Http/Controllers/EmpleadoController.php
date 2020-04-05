@@ -11,7 +11,7 @@ use DB;
 class EmpleadoController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth');
+        // $this->middleware('auth');
    }
     public function index(Request $request)
     {
@@ -43,7 +43,10 @@ class EmpleadoController extends Controller
         $empleado->apeMaterno=$request->get('apeMaterno');
         $empleado->domicilio=$request->get('domicilio');
         $empleado->telefono=$request->get('telefono');
-        $empleado->correo=$request->get('correo');
+        $empleado->fechaIngreso=$request->get('fechaIngreso');
+        $empleado->puesto=$request->get('puesto');
+        $empleado->salario=$request->get('salario');
+        $empleado->seguro=$request->get('seguro');
         $empleado->activo='1';
         $empleado->save();
         return Redirect::to('acceso\empleado');
@@ -66,7 +69,10 @@ class EmpleadoController extends Controller
         $empleado->apeMaterno=$request->get('apeMaterno');
         $empleado->domicilio=$request->get('domicilio');
         $empleado->telefono=$request->get('telefono');
-        $empleado->correo=$request->get('correo');
+        $empleado->fechaIngreso=$request->get('fechaIngreso');
+        $empleado->puesto=$request->get('puesto');
+        $empleado->salario=$request->get('salario');
+        $empleado->seguro=$request->get('seguro');
         $empleado->activo='1';
         $empleado->update();
         return Redirect::to('acceso/empleado');

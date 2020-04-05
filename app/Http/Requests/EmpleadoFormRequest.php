@@ -25,12 +25,14 @@ class EmpleadoFormRequest extends FormRequest
     {
         return [
             'nombre'=>'required|max:50',
-            'apePaterno'=>'required|max:50',
-            'apeMaterno'=>'required|max:50',
+            'apePaterno'=>'required|max:45',
+            'apeMaterno'=>'required|max:45',
             'domicilio'=>'required|max:100',
-            'telefono'=>'max:100',
-            'correo'=>'max:100'
-
+            'telefono'=>'max:20',
+            'fechaIngreso'=>'date',
+            'puesto'=>'max:45',
+            'salario'=>'numeric',
+            'seguro'=>'numeric'
         ];
     }
 }

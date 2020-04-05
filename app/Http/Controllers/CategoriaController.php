@@ -11,19 +11,19 @@ class CategoriaController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth');
+        // $this->middleware('auth');
    }
     public function index(Request $request)
     {
        if($request){
            //Determinar el texto de busqueda para fltrar la categoria
            $query = trim($request->get('searchText'));
-           $categorias=DB::table('categoria')
-           ->where('nombre','LIKE','%'.$query.'%')
-           ->where('condicion','=','1')
-            ->orderBy('idcategoria','asc')
-            ->paginate(7);
-           return view ('almacen.categoria.index',["categorias"=>$categorias,"searchText"=>$query]);
+           $tipoProductos=DB::table('tipoproducto')
+           ->where('tipo','LIKE','%'.$query.'%')
+           ->where('estatus','=','1')
+           ->orderBy('idTipoProducto','asc')
+           ->paginate(7);
+           return view ('almacen.categoria.index',["tiposProductos"=>$tipoProductos,"searchText"=>$query]);
        }
     }
 
@@ -31,13 +31,14 @@ class CategoriaController extends Controller
     {
         return view("almacen.categoria.create");
     }
+
     // Almacenar el objeto del modelo categoria  en nuestra tabla categoria de nuestra BD
     public function store(CategoriaFormRequest $request)
     {
         $categoria = new Categoria;
-        $categoria->nombre=$request->get('nombre');
+        $categoria->tipo=$request->get('tipo');
         $categoria->descripcion=$request->get('descripcion');
-        $categoria->condicion='1';
+        $categoria->estatus='1';
         $categoria->save();
         return Redirect::to('almacen\categoria');
     }
@@ -54,7 +55,7 @@ class CategoriaController extends Controller
     public function update(CategoriaFormRequest $request,$id)
     {
         $categoria=Categoria::findorFail($id);
-        $categoria->nombre=$request->get('nombre');
+        $categoria->tipo=$request->get('tipo');
         $categoria->descripcion=$request->get('descripcion');
         $categoria->update();
         return Redirect::to('almacen/categoria');
@@ -68,7 +69,7 @@ class CategoriaController extends Controller
     public function destroy($id)
     {
         $categoria=Categoria::findorFail($id);
-        $categoria->condicion='0';
+        $categoria->estatus='0';
         $categoria->update();
         //Redirige al index 
         return Redirect::to('almacen/categoria');

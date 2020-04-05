@@ -26,9 +26,9 @@ class ProveedorFormRequest extends FormRequest
         return [
             'nombre'=>'required|max:50',
             'domicilio'=>'required|max:100',
-            'telefono'=>'max:100',
+            'telefono'=>'required|max:100',
             'correo'=>'max:100',
-            'unidadMedida'=>'max:100'
+            
         ];
     }
 }

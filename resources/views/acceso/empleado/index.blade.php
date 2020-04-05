@@ -14,11 +14,14 @@
                 <thead>
                     <th>Id</th>
                     <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
+                    <!-- <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th> -->
                     <th>Domicilio</th>
                     <th>Telefono</th>
-                    <th>Correo</th>
+                    <th>FechaIngreso</th>
+                    <th>Puesto</th>
+                    <th>Salario</th>
+                    <th>Seguro</th>
                     <th>Activo</th>
                     <th>Opciones</th>
                     
@@ -26,12 +29,15 @@
                 @foreach($empleados as $emp)
                 <tr>
                     <td>{{$emp->idEmpleado}}</td>
-                    <td>{{$emp->nombre}}</td>
-                    <td>{{$emp->apePaterno}}</td>
-                    <td>{{$emp->apeMaterno}}</td>
+                    <td>{{$emp->nombre.' '.$emp->apePaterno.' '.$emp->apeMaterno}}</td>
+                    <!-- <td>{{$emp->apePaterno}}</td>
+                    <td>{{$emp->apeMaterno}}</td> -->
                     <td>{{$emp->domicilio}}</td>
                     <td>{{$emp->telefono}}</td>
-                    <td>{{$emp->correo}}</td>
+                    <td>{{$emp->fechaIngreso}}</td>
+                    <td>{{$emp->puesto}}</td>
+                    <td>{{$emp->salario}}</td>
+                    <td>{{$emp->seguro}}</td>
                     <td>{{$emp->activo}}</td>
                     <td>
                         <a href="{{URL::action('EmpleadoController@edit',$emp->idEmpleado)}}"><button class="btn btn-info">Editar</button></a>

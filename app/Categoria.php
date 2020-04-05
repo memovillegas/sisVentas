@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     //Creacion de la tabla
-    protected $table = 'categoria';
+    protected $table = 'tipoProducto';
 
-    protected $primaryKey='idcategoria';
+    protected $primaryKey='idTipoProducto';
     
     public $timestamps = false;
 
     protected $fillable =[
-        'nombre',
+        'tipo',
         'descripcion',
-        'condicion'
+        'estatus'
     ];
 }

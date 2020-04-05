@@ -20,16 +20,17 @@ use Illuminate\Support\Facades\Route;
 //Hacer un grupo de rutas de recursos con peticion
 //index, edit,show,create
 Route::resource('almacen/categoria','CategoriaController');
-Route::resource('almacen/articulo','ArticuloController');
+// Route::resource('almacen/articulo','ArticuloController');]
+Route::resource('almacen/producto','ProductoController');
 Route::resource('acceso/empleado','EmpleadoController');
 Route::resource('compras/proveedor','ProveedorController');
-Route::resource('compras/ingreso','IngresoController');
+// Route::resource('compras/ingreso','PedidoProductoController');
+Route::resource('compras/pedidos','PedidoProductoController');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 
 
-Auth::routes();
-
-Route::get('/', 'HomeController@index')->name('home');
+// Auth::routes();
+// Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 

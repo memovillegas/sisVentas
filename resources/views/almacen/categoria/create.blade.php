@@ -16,8 +16,8 @@
            {!!Form::open(array('url'=>'almacen/categoria','method'=>'POST','autocomplete'=>'off'))!!}
            {!!Form::token()!!}
            <div class="form-group">
-               <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control" placeholder="Nombre:">
+               <label for="tipo">Nombre Categoria</label>
+                <input type="text" name="tipo" class="form-control" placeholder="Categoria:">
            </div>
 
            <div class="form-group">

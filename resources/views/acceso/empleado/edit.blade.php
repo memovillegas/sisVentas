@@ -58,11 +58,30 @@
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
-                    <label for="stock">Correo</label>
-                    <input type="text" name="correo"  value="{{$empleado->correo}}" class="form-control" placeholder="Correo::">
+                    <label for="stock">Fecha de Ingreso</label>
+                    <input type="date" name="fechaIngreso"  value="{{$empleado->fechaIngreso}}" class="form-control" placeholder="Fecha de ingreso:">
             </div>
         </div>
 
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="form-group">
+                    <label for="stock">Puesto</label>
+                    <input type="text" name="puesto"  value="{{$empleado->puesto}}" class="form-control" placeholder="Puesto:">
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="form-group">
+                    <label for="stock">Salario</label>
+                    <input type="text" name="salario"  value="{{$empleado->salario}}" class="form-control" placeholder="Salario:">
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="form-group">
+                    <label for="stock">Seguro</label>
+                    <input type="text" name="seguro"  value="{{$empleado->seguro}}" class="form-control" placeholder="Seguro:">
+            </div>
+        </div>
+       
        
 
        
